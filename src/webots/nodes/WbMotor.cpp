@@ -109,7 +109,6 @@ void WbMotor::preFinalize() {
   updateMaxVelocity();
   updateMaxAcceleration();
   updateControlPID();
-  updateMinAndMaxPosition();
   updateSound();
 
   mForceOrTorqueSensor = new WbSensor();
@@ -141,6 +140,7 @@ void WbMotor::postFinalize() {
   connect(mSound, &WbSFString::changed, this, &WbMotor::updateSound);
   connect(mMuscles, &WbSFNode::changed, this, &WbMotor::updateMuscles);
   connect(mMaxForceOrTorque, &WbSFDouble::changed, this, &WbMotor::updateMaxForceOrTorque);
+  updateMinAndMaxPosition();
 }
 
 void WbMotor::createWrenObjects() {
@@ -185,8 +185,14 @@ void WbMotor::updateMinAndMaxPosition() {
 
   WbJoint *parentJoint = dynamic_cast<WbJoint *>(parentNode());
   double p = 0.0;
-  if (parentJoint && parentJoint->parameters())
-    p = parentJoint->parameters()->position();
+  if (parentJoint) {
+    if (positionIndex() == 1 && parentJoint->parameters())
+      p = parentJoint->parameters()->position();
+    if (positionIndex() == 2 && parentJoint->parameters2())
+      p = parentJoint->parameters2()->position();
+    if (positionIndex() == 3 && parentJoint->parameters3())
+      p = parentJoint->parameters3()->position();
+  }
 
   // current joint position should lie between min and max position
   WbFieldChecker::resetDoubleIfLess(this, mMaxPosition, p, p);
