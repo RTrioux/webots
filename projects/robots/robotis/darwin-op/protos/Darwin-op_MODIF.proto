@@ -687,13 +687,13 @@ PROTO Darwin-op_MODIF [
                                   }
                                   physics Physics {
                                     density -1
-                                    mass 0.1630002 # was 0.0794462
-                                    centerOfMass [
-                                      0.00950588 -0.0259953 -0.000502877
-                                    ]
-                                    inertiaMatrix [
-                                      6.8325629e-05 8.7890505e-05 3.5840758e-05, 2.5330463e-06 2.1869558e-07 9.7620541e-07
-                                    ]
+                                    mass 0.2465542 # was 0.1630002
+                                    #centerOfMass [
+                                    #  0.00950588 -0.0259953 -0.000502877
+                                    #]
+                                    #inertiaMatrix [
+                                    #  6.8325629e-05 8.7890505e-05 3.5840758e-05, 2.5330463e-06 2.1869558e-07 9.7620541e-07
+                                    #]
                                   }
                                 }
                               }
@@ -721,7 +721,7 @@ PROTO Darwin-op_MODIF [
                             }
                             physics Physics {
                               density -1
-                              mass 0.1538638 # was 0.0703098
+                              mass 0.0703098
                               centerOfMass [
                                 -0.000592469 -0.0539545 0.00654763
                               ]
@@ -1079,13 +1079,13 @@ PROTO Darwin-op_MODIF [
                                   }
                                   physics Physics {
                                     density -1
-                                    mass 0.1630002 # was 0.0794462
-                                    centerOfMass [
-                                      -0.00950588 -0.0259953 -0.000502877
-                                    ]
-                                    inertiaMatrix [
-                                      6.8325629e-05 8.7890505e-05 3.5840758e-05, -2.5330463e-06 -2.1869558e-07 9.7620541e-07
-                                    ]
+                                    mass 0.2465542 # was 0.1630002
+                                    #centerOfMass [
+                                    #  -0.00950588 -0.0259953 -0.000502877
+                                    #]
+                                    #inertiaMatrix [
+                                    #  6.8325629e-05 8.7890505e-05 3.5840758e-05, -2.5330463e-06 -2.1869558e-07 9.7620541e-07
+                                    #]
                                   }
                                 }
                               }
@@ -1113,7 +1113,7 @@ PROTO Darwin-op_MODIF [
                             }
                             physics Physics {
                               density -1
-                              mass 0.1538638 # was 0.0703098
+                              mass 0.0703098
                               centerOfMass [
                                 0.000592469 -0.0539545 0.00654763
                               ]
